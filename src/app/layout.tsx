@@ -1,7 +1,9 @@
+// Import necessary modules
 import React from 'react'
 import { Metadata } from 'next'
-import {Jost} from 'next/font/google'
+import { Jost } from 'next/font/google'
 
+// Import components and utilities
 import { AdminBar } from './_components/AdminBar'
 import { Footer } from './_components/Footer'
 import { Header } from './_components/Header'
@@ -9,14 +11,17 @@ import { Providers } from './_providers'
 import { InitTheme } from './_providers/Theme/InitTheme'
 import { mergeOpenGraph } from './_utilities/mergeOpenGraph'
 
+// Import styles
 import './_css/app.scss'
 
+// Define Jost font settings
 const jost = Jost({
-  subsets:['latin'],
-  weight:['400', '700'],
-  variable:'--font-jost',
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-jost',
 })
 
+// Define RootLayout component
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -30,8 +35,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           <AdminBar />
           {/* @ts-expect-error */}
           <Header />
-          <main className='main'>{children}</main>
-          
+          <main className="main">{children}</main>
+
           {/* @ts-expect-error */}
           <Footer />
         </Providers>
@@ -40,6 +45,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   )
 }
 
+// Define metadata
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SERVER_URL || 'https://payloadcms.com'),
   twitter: {

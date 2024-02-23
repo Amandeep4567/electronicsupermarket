@@ -1,8 +1,7 @@
 'use client'
-
 import React, { useEffect, useState } from 'react'
-import classes from './index.module.scss'
 
+import classes from './index.module.scss'
 const Promotion = () => {
   const [time, setTime] = useState({
     days: 0,
@@ -35,7 +34,7 @@ const Promotion = () => {
     return () => {
       clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
     }
-  }, [])
+  })
   return (
     <section className={classes.promotion}>
       <div className={classes.textBox}>

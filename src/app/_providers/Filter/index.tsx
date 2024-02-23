@@ -1,7 +1,5 @@
 'use client'
-
-import React, { ReactNode, SetStateAction, createContext, useContext, useState } from 'react'
-
+import React, { createContext, ReactNode, SetStateAction, useContext, useState } from 'react'
 interface IContextType {
   categoryFilters: string[]
   setCategoryFilters: React.Dispatch<SetStateAction<string[]>>
