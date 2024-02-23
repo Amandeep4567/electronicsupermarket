@@ -7,8 +7,4 @@ module.exports = {
     'prettier/prettier': ['error', { endOfLine: 'auto' }],
     'no-console': 'off',
   },
-  parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 'latest',
-  },
 }
